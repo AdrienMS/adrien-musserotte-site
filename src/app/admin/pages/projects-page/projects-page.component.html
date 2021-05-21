@@ -1,0 +1,10 @@
+<app-menu appSettingTheme></app-menu>
+<div class="projects" appSettingTheme>
+    <mat-tab-group mat-align-tabs="start">
+        <ng-container *ngFor="let project of (projects$ | async); let i = index">
+            <mat-tab [label]="project.name">
+                <app-dynamic-form [fields]="regConfigs[i]" (submit)='submit($event)'></app-dynamic-form>
+            </mat-tab>
+        </ng-container>
+    </mat-tab-group>
+</div>

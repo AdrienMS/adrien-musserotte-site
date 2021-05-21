@@ -1,0 +1,164 @@
+%clearfix
+    &:after, &:before
+        content: ''
+        display: block
+        width: 100%
+        clear: both
+
+@mixin prefix($prop, $val) 
+    @each $prefix in '-webkit-', '-moz-', '-ms-', ''
+        #{$prefix}#{$prop}: $val
+
+*, *:before, *:after
+    box-sizing: border-box
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+
+.container-career
+    width: 100%
+    background-color: var(--background)
+
+// Timeline
+#timeline
+    width: 100%
+    max-width: 1100px
+    margin: 0 auto 0 auto
+    position: relative
+    padding: 0 10px
+    background-color: var(--background)
+    @include prefix(transition, all .4s ease)
+    &:before
+        content:""
+        width: 10px
+        height: 100%
+        background: var(--primary)
+        left: calc(50% - 5px)
+        top: 2px
+        position: absolute
+        border-right: 5px solid var(--primary-shadow)
+        //box-shadow: var(--box-shadow-2)
+    &:after
+        content: ""
+        clear: both
+        display: table
+        width: 100%
+
+    .timeline-item
+        margin-bottom: 50px
+        position: relative
+        @extend %clearfix
+
+        .timeline-icon-border
+            background: var(--primary-shadow)
+            background-image: linear-gradient(to right, var(--primary-shadow) 19px, var(--primary) 19px, var(--primary) 24px, var(--primary-shadow) 24px, var(--primary-shadow) 50px)
+            width: 53px
+            height: 53px
+            position: absolute
+            top: 0
+            left: 50%
+            overflow: hidden
+            margin-left: -24px
+            @include prefix(border-radius, 50%)
+            &#item_0
+                background-image: none
+            .timeline-icon
+                background: var(--primary)
+                width: 48px
+                height: 48px
+                margin-top: 5px
+                @include prefix(border-radius, 50%)
+
+            fa-icon
+                position: relative
+                top: 8px
+                left: 14px
+                font-size: 19px
+                color: white
+        
+        .timeline-card
+            width: 45%
+            background: var(--special-solo-card)
+            padding: 20px
+            box-shadow: var(--box-shadow-2)
+            border: 1px solid var(--primary)
+            @include prefix(border-radius, 5px)
+            @include prefix(transition, all .3s ease)
+            &:before
+                content: ''
+                position: absolute
+                left: 100%
+                top: 20px
+                width: 0
+                height: 0
+                border-top: 7px solid transparent
+                border-bottom: 7px solid transparent
+                border-left:7px solid var(--primary)
+            &.right
+                float: right
+                &:before
+                    content: ''
+                    right: 100%
+                    left: inherit
+                    border-left: 0
+                    border-right: 7px solid var(--primary)
+
+            .timeline-header
+                padding: 15px 15px 15px 0px
+                background: var(--primary)
+                margin: -20px -20px 0 -20px
+                @include prefix(border-radius, 3px 3px 0 0)
+
+                .header-left
+                    float: left
+                    width: 60%
+                    display: flex
+
+                    .logo
+                        margin-left: -17px
+                        margin-right: 10px
+                        background-position: center
+
+                    .text
+                        .title
+                            color: #fff
+                            font-weight: bold
+                        
+                        .enterprise
+                            color: #fff
+                            margin-bottom: 0
+                
+                .header-right
+                    float: right
+                    width: 40%
+                    text-align: right
+
+                    .date
+                        color: white
+        
+        .timeline-content
+            padding-top: 20px
+
+            .content
+                color: var(--on-background)
+
+
+@media screen and (max-width: 768px)
+    #timeline
+        padding: 0px
+        width: 90%
+        margin-bottom: 0
+        &:before
+            left: -3px
+
+        .timeline-item
+            .timeline-card
+                width: 90%
+                float: right
+                &:before, &.right:before
+                    left: 0
+                    margin-left: -6px
+                    border-left: 0
+                    border-right: 7px solid var(--primary)
+
+            .timeline-icon-border
+                left: 2px

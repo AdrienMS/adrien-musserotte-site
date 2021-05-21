@@ -1,0 +1,11 @@
+<app-menu appSettingTheme></app-menu>
+<div class="skills" appSettingTheme>
+    <mat-tab-group mat-align-tabs="start">
+        <ng-container *ngFor="let category of (skillsCategories$ | async); let i = index">
+            <mat-tab [label]="category.name">
+                <app-dynamic-form [fields]="regConfigs[i]" (submit)='submit($event)'></app-dynamic-form>
+                <!--<app-dynamic-form [fields]="skillsConfig" (submit)='submitSkills($event)'></app-dynamic-form>-->
+            </mat-tab>
+        </ng-container>
+    </mat-tab-group>
+</div>

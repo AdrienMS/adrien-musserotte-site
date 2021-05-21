@@ -1,0 +1,67 @@
+<div class="pre-header">
+    <ng-container *ngTemplateOutlet="social"></ng-container>
+</div>
+<header class="menu" id="menu" [ngClass]="{'fixed': isFixed}">
+    <a [routerLink]="['']" routerLinkActive="router-link-active"  class="link-home"><div class="content-logo"></div></a>
+    <div class="holder">
+        <div class="nav row">
+            <a href="#" class="item col" (focus)="scrollTo('timeline')">Parcours</a>
+            <a href="#" class="item col" (focus)="scrollTo('about')">à propos</a>
+            <a href="#" class="item col" (focus)="scrollTo('skills')">compétences</a>
+            <a href="#" class="item col" (focus)="scrollTo('projects')">projets</a>
+            <a href="#" class="item col" (focus)="scrollTo('contact')">contact</a>
+        </div>
+    </div>
+    <div class="bars" (click)="onOpenMenu()">
+        <fa-icon [icon]="faBars"></fa-icon>
+    </div>
+</header>
+
+
+<div class="black-screen" id="black_screen" (click)="onCloseMenu()"></div>
+<div class="nav-mobile" id="nav_mobile">
+    <div class="home">
+        <a href="#" class="link-home"><div class="content-logo"></div></a>
+    </div>
+    <ul class="list">
+        <li class="item">
+            <a href="#" class="link" (focus)="scrollTo('timeline')">Parcours</a>
+        </li>
+        <mat-divider></mat-divider>
+        <li class="item">
+            <a href="#" class="link" (focus)="scrollTo('about')">à propos</a>
+        </li>
+        <mat-divider></mat-divider>
+        <li class="item">
+            <a href="#" class="link" (focus)="scrollTo('skills')">compétences</a>
+        </li>
+        <mat-divider></mat-divider>
+        <li class="item">
+            <a href="#" class="link" (focus)="scrollTo('projects')">projets</a>
+        </li>
+        <mat-divider></mat-divider>
+        <li class="item">
+            <a href="#" class="link" (focus)="scrollTo('contact')">contact</a>
+        </li>
+    </ul>
+    <div class="social-bottom">
+        <ng-container *ngTemplateOutlet="social"></ng-container>
+    </div>
+</div>
+
+<ng-template #social>
+    <div class="social">
+        <a href="https://www.linkedin.com/in/adrien-musserotte" class="link"><fa-icon [icon]="faLinkedinIn"></fa-icon></a>
+        <a href="https://github.com/AdrienMS" class="link"><fa-icon [icon]="faGithub"></fa-icon></a>
+    </div>
+    <div class="contact">
+        <a href="tel:+33627294749" class="link">
+            <fa-icon [icon]="faPhoneAlt"></fa-icon>
+            <p>(+33)6.27.29.47.49</p>
+        </a>
+        <a href = "mailto: adrien.musserotte@gmail.com" class="link">
+            <fa-icon [icon]="faEnvelope"></fa-icon>
+            <p>adrien.musserotte@gmail.com</p>
+        </a>
+    </div>
+</ng-template>

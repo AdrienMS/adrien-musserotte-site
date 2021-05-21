@@ -1,0 +1,66 @@
+.container
+    width: 100%
+    max-width: 100%
+    height: calc(100vh - 102px)
+    padding: 0
+    background-color: var(--background)
+
+    .card
+        position: absolute
+        width: 50vw
+        top: 20vh
+        left: 25vw
+        box-shadow: var(--box-shadow-2)
+        background-color: var(--special-solo-card)
+        border: 1px solid var(--primary)
+
+        .title
+            text-align: left
+            padding: 5px calc(5% - 5px)
+            border-left: 5px solid var(--primary)
+            color: var(--primary)
+            text-transform: uppercase
+            font-size: 30px
+            margin-top: 20px
+
+        .form
+            .field
+                width: 90%
+                display: block
+                margin: auto
+
+                .label
+                .input
+                    color: var(--primary)
+
+                .btn-icon
+                    background-color: transparent
+                    border: 0
+            
+            .error
+                text-align: center
+                color: red
+                width: 90%
+                margin: 0 auto
+
+            .submit
+                margin: 20px 30%
+                width: 40%
+                padding: 20px 0
+                font-size: 25px
+                text-transform: uppercase
+                font-weight: bold
+                color: black
+                cursor: pointer
+                background-color: var(--special-solo-card)
+                border: 2px solid var(--special-solo-card-secondary)
+                color: var(--special-solo-card-secondary)
+                &:hover
+                    border: 2px solid var(--primary)
+                    color: var(--primary)
+                
+                p
+                    margin: 0
+                
+                .loading
+                    margin-left: calc(50% - 10px)

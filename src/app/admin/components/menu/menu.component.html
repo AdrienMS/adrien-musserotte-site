@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="menu-left" [ngClass]="{'top': isToTop}">
+        <ul class="list">
+            <li class="item main">
+                <p class="link">ADMIN</p>
+            </li>
+            <ng-container *ngFor="let item of menu; let i = index">
+                <li class="item">
+                    <a [routerLink]="['/admin/' + (item | menuLink)]" routerLinkActive="router-link-active"  class="link">{{item}}</a>
+                </li>
+                <mat-divider></mat-divider>
+            </ng-container>
+            <li class="item">
+                <p class="link" (click)="logout()">Déconnexion</p>
+            </li>
+        </ul>
+    </div>
+    <div class="toggle-menu" [ngClass]="{'top': isToTop}">
+        <div class="icon">
+            <fa-icon class="angle" [icon]="faAngleRight"></fa-icon>
+        </div>
+    </div>
+</div>

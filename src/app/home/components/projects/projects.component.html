@@ -1,0 +1,12 @@
+<div class="projects row">
+    <div class="parallax-card col-lg-3 col-md-4 col-sm-6 col-12" *ngFor="let project of projects">
+      <div class="parallax-card__holder">
+        <div class="parallax-card__front" *ngIf="(project.image | singleImage | async) as image" [style]="'background-image: url('+image.path+')'">
+          <div class="parallax-card__content"><span class="parallax-card__front-title">{{project.name}}</span></div>
+        </div>
+        <div class="parallax-card__back">
+          <div class="parallax-card__content"><span class="parallax-card__back-descr">{{project.desc}}</span></div>
+        </div>
+      </div>
+    </div>
+  </div>

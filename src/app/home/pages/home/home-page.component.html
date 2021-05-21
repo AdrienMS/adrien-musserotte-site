@@ -1,0 +1,68 @@
+<div class="home" id="home" appSettingTheme>
+    <div id="particles-js" [style]="'height: '+toResize"></div>
+    <div id="particles-js-bubble" class="particles-js-bubble"></div>
+    <app-banner class="banner" id="banner"></app-banner>
+    <div class="career" id="parcours">
+        <h2 class="title">Mon parcours</h2>
+        <app-career></app-career>
+    </div>
+    <div class="about">
+      <div class="shape-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" preserveAspectRatio="none" class="left">
+            <path d="M 500,0 C 500,15 383,88 0,100 L 0,96 0,0 Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" preserveAspectRatio="none" class="right">
+            <path d="m 0,0 C 0,15 117,88 500,100 L 500,0 0,0 z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" preserveAspectRatio="none" class="right-border">
+            <linearGradient id="border" x2="1" y2="1">
+            <stop offset="0%" stop-color="var(--primary-shadow)" />
+            <stop offset="100%" stop-color="var(--shadow)" />
+            </linearGradient>
+            <path d="m 0,0 C 0,15 117,88 500,100 L 500,0 0,0 z" fill="url(#border)"></path>
+        </svg>
+      </div>
+      <div class="logo-epitech">
+      </div>
+      <h2 class="title">à propos de moi</h2>
+      <app-about></app-about>
+    </div>
+    <div class="skills">
+      <div class="shape-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" preserveAspectRatio="none">
+            <path d="M 500,0 C 100,0 0,100 0,100 l 0,50 H 1000 V 100 c 0,0 -100,-100 -500,-100 z"></path>
+        </svg>
+      </div>
+      <div class="section-title-shadow">
+        <div class="section-title">
+          <fa-icon [icon]="faDna"></fa-icon>
+        </div>
+      </div>
+      <h2 class="title">Mes Compétences</h2>
+      <app-skills></app-skills>
+    </div>
+    <div class="slash-divider">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+        <polygon points="0,0 100,0 100,10 0,40"/>
+      </svg>
+    </div>
+    <div class="section-title-shadow rocket">
+      <div class="section-title">
+        <fa-icon [icon]="faRocket"></fa-icon>
+      </div>
+    </div>
+    <div class="projects">
+      <h2 class="title">Mes Projets</h2>
+      <app-projects></app-projects>
+    </div>
+    <div class="contact" id="contact">
+      <div class="reverse-slash-divider">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40" preserveAspectRatio="none">
+          <polygon points="100,40 100,0 0,30 0,40"/>
+        </svg>
+      </div>
+      <h2 class="title">Me contacter</h2>
+      <app-contact></app-contact>
+    </div>
+  </div>
+  

@@ -1,0 +1,32 @@
+<div class="container-career">
+    <div id="timeline">
+      <div class="timeline-item" *ngFor="let item of (careers$ | async); let i = index">
+        <div class="timeline-icon-border" [id]="'item_'+i">
+          <div class="timeline-icon">
+            <fa-icon [icon]="faStar"></fa-icon>
+          </div>
+        </div>
+  
+        <mat-card class="timeline-card" [ngClass]="{'right': this.isRight[i]}">
+          <mat-card-header class="timeline-header">
+            <div class="header-left">
+              <div mat-card-avatar class="logo" *ngIf="(item.img | singleImage | async) as image" [style]="'background-image: url('+image.path+');background-size: cover;'"></div>
+              <div class="text">
+                <mat-card-title class="title">{{item.position}}</mat-card-title>
+                <mat-card-subtitle class="enterprise">{{item.title}}</mat-card-subtitle>
+              </div>
+            </div>
+            <div class="header-right">
+              <mat-card-subtitle class="date">{{item.dateStart | date:"MM/yyyy"}} - {{item.dateEnd | actualDate:"MM/yyyy"}}</mat-card-subtitle>
+            </div>
+          </mat-card-header>
+          <mat-card-content class="timeline-content">
+            <p class="content">
+              {{item.desc}}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  

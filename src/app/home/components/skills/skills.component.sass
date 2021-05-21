@@ -1,0 +1,74 @@
+.skills
+    display: grid
+    grid-template-areas:'left center-top right' 'left center-bottom right'
+    grid-gap: 10px
+    background-color: var(--background)
+    transition: .2s
+    width: 100%
+    padding: 30px 5%
+
+    .skills-card
+        height: fit-content
+        box-shadow: var(--box-shadow-2)
+        border: 1px solid var(--primary)
+        padding: 20px
+        margin: 10px
+        background-color: var(--special-solo-card)
+        border-radius: 5px
+        transition: .2s
+        &.left
+            grid-area: left
+        &.center-top
+            grid-area: center-top
+        &.center-bottom
+            grid-area: center-bottom
+        &.right
+            grid-area: right
+        
+        .header
+            background: var(--primary)
+            padding: 15px 15px 15px 0px
+            margin: -20px -20px 0 -20px
+
+            .logo
+                margin: 0 10px
+                background-position: center
+                background-size: cover
+                background-color: white
+
+            .title
+                margin: 0
+                font-size: 20px
+                margin-top: 10px
+                color: white
+                font-variant-caps: all-small-caps
+
+        .content
+            margin-bottom: 0
+            .progress-bar
+                margin: 10px 0
+                width: 100%
+                height: fit-content
+                .total
+                    width: 100%
+                    height: fit-content
+                    background-color: #d7ccc8
+                    .current
+                        height: fit-content
+                        background-color: #bcaaa4
+                        .text
+                            margin: 0
+                            font-size: 18px
+                            text-align: left
+                            padding: 2px
+                            font-variant-caps: all-small-caps
+
+@media screen and (max-width: 768px)
+    .skills
+        grid-template-areas:'left' 'center-top' 'center-bottom' 'right'
+        transition: .2s
+        
+        .skills-card
+            width: 90%
+            margin-left: 5%
+            transition: .2s

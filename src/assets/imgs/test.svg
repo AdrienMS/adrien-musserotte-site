@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+    class="waves"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 352.21271 247.84038"
+    preserveAspectRatio="none"
+    shape-rendering="auto">
+    <style>
+        /* <![CDATA[ */
+        .square > use:nth-child(1) {
+            opacity: 1
+        }
+
+        .parallax > use {
+            animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+        }
+
+        .parallax > use:nth-child(1) {
+            animation-delay: -2s;
+            animation-duration: 7s;
+            opacity: .1;
+        }
+
+        .parallax > use:nth-child(2) {
+            animation-delay: -3s;
+            animation-duration: 10s;
+            opacity: .3;
+        }
+
+        .parallax > use:nth-child(3) {
+            animation-delay: -4s;
+            animation-duration: 13s;
+            opacity: .5;
+        }
+
+        .parallax > use:nth-child(4) {
+            animation-delay: -5s;
+            animation-duration: 16s;
+            opacity: 1;
+        }
+        
+
+        @keyframes move-forever {
+            0% {
+                transform: translate3d(-100%,0,0);
+            }
+            100% {
+                transform: translate3d(100%,0,0);
+            }
+        }
+        /* ]]> */
+    </style>
+    <defs id="defs18442">
+        <path
+            d="m -0.003095,23.996094 352.194035,0.0071 0.0218,224.519706 L 0,248.34752 Z"
+            id="square"/>
+    </defs>
+    <g class="square">
+        <use xlink:href="#square" x="0" y="0"/>
+    </g>
+    <defs id="defs18443">
+        <path
+            d="m 77.246865,265.70169 c -7.2977,-0.9386 -15.70655,-3.03065 -33.53574,-8.34342 -19.57887,-5.83413 -29.08334,-7.99159 -37.9177,-8.60711 l -5.79352,-0.40365 v -25.1661 l -0.003,-199.185316 c 352.194035,0.007 0,0 352.194035,0.007 0.0218,224.519696 0,0 0.0218,224.519696 l -3.56153,0.004 c -7.97168,0.009 -20.81155,2.76957 -39.96045,8.59161 -26.33364,8.00651 -30.92458,8.90919 -45.15977,8.87943 -13.26288,-0.0277 -18.80495,-1.09164 -41.65581,-7.9968 -24.80671,-7.49618 -34.36085,-9.46767 -45.91351,-9.47424 -11.61477,-0.007 -20.61687,1.81929 -45.23602,9.17517 -16.67218,4.98144 -25.48822,7.14848 -32.665817,8.0295 -5.77339,0.70866 -15.17762,0.69537 -20.812838,-0.0294 z"
+            id="gentle-wave"/>
+    </defs>
+    <g class="parallax">
+        <use xlink:href="#gentle-wave" width="100" height="100" x="100%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="100%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="100%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="100%"/>
+    </g>
+    <g class="parallax">
+        <use xlink:href="#gentle-wave" width="100" height="100" x="50%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="50%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="50%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="50%"/>
+    </g>
+    <g class="parallax">
+        <use xlink:href="#gentle-wave" width="100" height="100"/>
+        <use xlink:href="#gentle-wave" width="100" height="100"/>
+        <use xlink:href="#gentle-wave" width="100" height="100"/>
+        <use xlink:href="#gentle-wave" width="100" height="100"/>
+    </g>
+    <g class="parallax">
+        <use xlink:href="#gentle-wave" width="100" height="100" x="-50%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="-50%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="-50%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="-50%"/>
+    </g>
+    <g class="parallax">
+        <use xlink:href="#gentle-wave" width="100" height="100" x="-100%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="-100%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="-100%"/>
+        <use xlink:href="#gentle-wave" width="100" height="100" x="-100%"/>
+    </g>
+</svg>

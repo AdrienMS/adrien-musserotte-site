@@ -1,0 +1,135 @@
+.content-about
+    height: fit-content
+    position: relative
+    overflow: hidden
+    
+    #particles-js
+      position: fixed
+      width: 100%
+      height: 100%
+      top: 0
+      z-index: -2
+
+    .scene-about
+        position: fixed
+        width: 100%
+        height: 100vh
+        top: 0
+        will-change: transform
+        transition: .2
+        z-index: -1
+        .logo
+          width: 50%
+          transform: translateY(-50%)
+          margin: 50vh 25% 0 25%
+          opacity: .4
+    
+    .logo-epitech
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-image: url("../../../../assets/imgs/career/epitech.png")
+      background-attachment: fixed
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+    
+    .about
+      width: 70%
+      margin: 5vh auto 15vh auto
+      display: flex
+
+      .image
+        width: 15vw
+        height: 15vw
+        background-color: white
+        border: 3px solid var(--primary)
+        border-radius: 50%
+        margin-right: 30px
+        margin: auto 30px auto 0
+        box-shadow: var(--box-shadow-1)
+
+        .photo
+          width: calc(15vw - 6px)
+          height: calc(15vw - 6px)
+          border-radius: 50%
+
+      .text
+        color: white
+        margin: auto 0
+        font-size: 19px
+        text-shadow: var(--box-shadow-1)
+
+.waves
+    position:relative
+    width: 100%
+    height:15vh
+    margin-bottom:-7px
+    min-height:100px
+    max-height:150px
+    transform: rotate(180deg)
+
+.parallax > use
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite
+
+.parallax > use:nth-child(1)
+  animation-delay: -2s
+  animation-duration: 7s
+
+.parallax > use:nth-child(2)
+  animation-delay: -3s
+  animation-duration: 10s
+
+.parallax > use:nth-child(3)
+  animation-delay: -4s
+  animation-duration: 13s
+
+.parallax > use:nth-child(4)
+  animation-delay: -5s
+  animation-duration: 20s
+
+@keyframes move-forever
+  0%
+   transform: translate3d(-90px,0,0)
+  100%
+    transform: translate3d(85px,0,0)
+
+@media only screen and (max-width: 850px)
+  .content-about
+    .about
+      display: block
+      width: 90%
+
+      .image
+        width: 30vw
+        height: 30vw
+        margin: 20px auto
+
+        .photo
+          width: calc(30vw - 6px)
+          height: calc(30vw - 6px)
+    
+@media (max-width: 768px)
+  .content-about
+    .scene-about
+      .logo
+        width: 80%
+        margin: 50vh 10% 0 10%
+
+  .waves
+    height:40px
+    min-height:40px
+  
+
+@media only screen and (max-width: 600px)
+  .content-about
+    .about
+      .image
+        width: 40vw
+        height: 40vw
+
+        .photo
+          width: calc(40vw - 6px)
+          height: calc(40vw - 6px)

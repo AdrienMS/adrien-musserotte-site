@@ -1,0 +1,9 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": "auth.uid != null",
+      "contacts": {
+        ".write": true
+      }
+  }
+}

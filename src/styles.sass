@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+body
+  margin: 0
+  
+@import "~bootstrap/scss/bootstrap.scss"
+
+@font-face
+  font-family: 'Material Icons'
+  font-style: normal
+  font-weight: 400
+  src: url(https://example.com/MaterialIcons-Regular.eot) /* For IE6-8 */
+  src: local('Material Icons'),local('MaterialIcons-Regular'),url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),url(https://example.com/MaterialIcons-Regular.woff) format('woff'),url(https://example.com/MaterialIcons-Regular.ttf) format('truetype')
+
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap')
+
+.material-icons
+  font-family: 'Material Icons'
+  font-weight: normal
+  font-style: normal
+  font-size: 24px  /* Preferred icon size */
+  display: inline-block
+  line-height: 1
+  text-transform: none
+  letter-spacing: normal
+  word-wrap: normal
+  white-space: nowrap
+  direction: ltr
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale
+
+  /* Support for IE. */
+  font-feature-settings: 'liga'
+
+.mat-form-field
+  &.mat-focused
+    .mat-form-field-wrapper
+      .mat-form-field-underline
+        .mat-form-field-ripple
+          background-color: var(--primary)
+      .mat-form-field-flex
+        .mat-form-field-infix
+          .mat-form-field-label-wrapper
+            .mat-form-field-label
+              color: var(--primary)
+
+  .mat-form-field-wrapper
+    .mat-form-field-underline
+      background-color: var(--on-background)  
+    .mat-form-field-flex
+      .mat-form-field-infix
+        .mat-form-field-label-wrapper
+          .mat-form-field-label
+            color: var(--on-background)
+
+.mat-progress-spinner circle, .mat-spinner circle
+  stroke: var(--primary)

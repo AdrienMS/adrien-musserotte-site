@@ -1,0 +1,35 @@
+<div class="settings" [ngClass]="{'show': isShow}">
+    <p class="icon" (click)="toggleSettings()"><fa-icon [icon]="faCog"></fa-icon></p>
+    <mat-card class="card-settings">
+        <mat-card-header class="header">
+            <mat-card-title class="title">Changer le thème</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="container">
+            <div class="element">
+                <h2 class="title">Couleur</h2>
+                <div class="content row">
+                    <div class="item col-1 blue" (click)="onChangeColor('blue')"></div>
+                    <div class="item col-1 red" (click)="onChangeColor('red')"></div>
+                    <div class="item col-1 green" (click)="onChangeColor('green')"></div>
+                    <div class="item col-1 orange" (click)="onChangeColor('orange')"></div>
+                    <div class="item col-1 pink" (click)="onChangeColor('pink')"></div>
+                    <div class="item col-1 purple" (click)="onChangeColor('purple')"></div>
+                </div>
+            </div>
+            <!--<mat-divider></mat-divider>
+            <div class="element">
+                <h2 class="title">Theme</h2>
+                <div class="content">
+                    <mat-button-toggle-group #group="matButtonToggleGroup" class="button-group" (change)="onChangeTheme(group.value)" [value]="c_theme">
+                        <mat-button-toggle value="light" aria-label="Light" class="button">
+                          <p class="text">Light</p>
+                        </mat-button-toggle>
+                        <mat-button-toggle value="dark" aria-label="Dark" class="button">
+                          <p class="text">Dark</p>
+                        </mat-button-toggle>
+                      </mat-button-toggle-group>
+                </div>
+            </div>-->
+        </mat-card-content>
+    </mat-card>
+</div>

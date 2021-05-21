@@ -1,0 +1,12 @@
+<app-menu appSettingTheme></app-menu>
+<div class="career" appSettingTheme>
+    <mat-tab-group mat-align-tabs="start">
+        <ng-container *ngFor="let career of (careers$ | async); let i = index">
+            <mat-tab [label]="career.title">
+                <!--<app-modify-form [fields]="tabFields[i]"></app-modify-form>-->
+                <app-dynamic-form [fields]="regConfigs[i]" (submit)='submit($event)'></app-dynamic-form>
+            </mat-tab>
+
+        </ng-container>
+    </mat-tab-group>
+</div>

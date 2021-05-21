@@ -1,0 +1,191 @@
+#particles-js, #particles-js-bubble
+    position: fixed
+    width: 100%
+    height: 100%
+    top: 0
+    background: #000000
+    z-index: -2
+#particles-js-bubble
+    z-index: -3
+    
+.title
+    font-size: 50px
+    text-transform: uppercase
+    text-align: center
+    margin-bottom: 5vh
+    color: var(--on-background)
+    font-family: 'Megrim', cursive
+    font-weight: 600
+    text-shadow: var(--box-shadow-2)
+
+.banner, .career, .about, .skills, .projects, .contact, .footer
+    position: relative
+
+.banner
+    z-index: 0
+.career
+    z-index: -1
+.about
+    z-index: -1
+.skills
+    z-index: 1
+.projects
+    z-index: 0
+.contact
+    z-index: 1
+.footer
+    z-index: 0
+    
+.career
+    padding: 5vh 0
+    background-color: var(--background)
+
+.career
+    margin-top: -150px
+    padding: 0
+    background-color: transparent
+    .title
+        background-color: var(--background)
+        padding-top: 200px
+        margin: 0
+        padding-bottom: 5vh
+
+.about
+    padding: 0 0 100px 0
+    background: radial-gradient(at center top, rgb(var(--primary-rgb)) 5%, rgba(var(--primary-rgb-gradient-1), .85) 25%, rgba(var(--primary-rgb-gradient-2), .8) 55%, #00000000 90%)
+    
+    .shape-divider
+        display: flex
+        z-index: 1
+        width: 100%
+        margin-top: -1px
+        svg
+            height: 150px
+            fill: var(--background)
+            .shape-border
+                fill: var(--shadow)
+        .left
+            width: calc(50% - 5px)
+            margin-right: 10px
+        .right
+            width: calc(50% - 5px)
+        .right-border
+            position: absolute
+            width: 50%
+            height: 155px
+            right: 0
+            top: 0
+            z-index: -1
+
+    .logo-epitech
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      opacity: .4
+      background-image: url("../../../../assets/imgs/career/epitech.png")
+      background-attachment: fixed
+      background-position: center
+      background-repeat: no-repeat
+      background-size: contain
+      z-index: -1
+
+    .title
+        text-shadow: var(--box-shadow-1)
+
+.skills
+    background-color: var(--background)
+    .shape-divider
+        position: absolute
+        width: 100%
+        top: -150px
+        background-color: transparent
+        fill: var(--background)
+        stroke-width: 2
+        stroke: var(--primary)
+        z-index: -1
+        svg
+            width: 100%
+            height: 150px
+
+    .title
+        position: absolute
+        width: 100%
+        top: -75px
+        
+.section-title-shadow
+    position: absolute
+    width: 110px
+    height: 110px
+    border-radius: 50%
+    background: transparent
+    background-image: linear-gradient(var(--shadow) 50%,transparent 50%)
+    top: -205px
+    left: calc(50% - 60px)
+    &.rocket
+        z-index: 2
+        top: unset
+        margin-top: 43px
+        background: transparent
+        background-image: linear-gradient(transparent calc(50% + 10px), var(--shadow) calc(50% + 10px))
+        .section-title
+            padding: 6px 0
+            fa-icon
+                margin: 0 16.5px
+
+    .section-title
+        width: 100px
+        height: 100px
+        border-radius: 50%
+        background-color: var(--primary)
+        margin-left: 10px
+            
+        fa-icon
+            color: white
+            font-size: 63px
+            margin: 0 22px
+    
+.slash-divider, .reverse-slash-divider
+    position: absolute
+    width: 100%
+    fill: var(--background)
+    z-index: 2
+    svg
+        width: 100%
+        height: 150px
+        filter:  drop-shadow(0 2px 0 var(--primary)) drop-shadow(var(--box-shadow-1))
+
+.reverse-slash-divider
+    margin-top: -150px
+    svg
+        filter:  drop-shadow(0 -2px 0 var(--primary))
+
+.projects
+    background: radial-gradient(at center top, rgb(var(--primary-rgb)) 5%, rgba(var(--primary-rgb-gradient-1), .85) 25%, rgba(var(--primary-rgb-gradient-2), .8) 55%, #00000000 90%)
+    margin-top: -100px
+    padding-top: 250px
+    padding-bottom: 200px
+    .title 
+        text-shadow: var(--box-shadow-1)
+
+.contact
+    background-color: var(--background)
+
+@media (max-width: 768px)
+    .about
+        background: radial-gradient(at left top, rgb(var(--primary-rgb)) 5%, rgba(var(--primary-rgb-gradient-1), .85) 25%, rgba(var(--primary-rgb-gradient-2), .8) 55%, #00000000 90%)
+    
+        .shape-divider
+            svg
+                height: 50px
+            .left
+                width: calc(5% - 3px)
+            .right
+                width: calc(95% - 10px)
+            .right-border
+                width: calc(95% - 1px)
+                height: 55px
+
+    .title
+        font-size: 35px

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import * as firebase from 'firebase';
+
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'adrienmusserotte';
+  title = 'Adrien Musserotte - Développeur Web';
+
+  constructor() {
+    firebase.initializeApp(environment.firebaseConfig);
+  }
 }
